@@ -2,217 +2,293 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Website</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./mediaquery.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Allen John - Portfolio Website</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
 </head>
 
 <body>
-    <nav class="navbr">
-        <h3>Portfolio.</h3>
+  <nav id="desktop-nav">
+    <div class="logo">allenjohn</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">allenjohn</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="./assets/profile-pic.png" alt="Allen John profile picture" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Allen John</h1>
+      <p class="section__text__p2">Full Stack Developer</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/Allen John Resume 2024.pdf')">
+          Resume
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div id="socials-container">
+        <div onclick="location.href='https://www.linkedin.com/in/allen-john-3a78092b9/'"
+          style="display: flex;align-items: center;gap: 5px;cursor: pointer;">
+          <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" />
+          <p>LinkedIn</p>
+        </div>
+        <div onclick="location.href='https://github.com/allenjohn07'"
+          style="display: flex;align-items: center;gap: 5px;cursor: pointer;">
+          <img src="./assets/github.png" alt="My Github profile" class="icon" />
+          <p>Github</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="./assets/education.png" alt="Education icon" class="icon" />
+            <h3>Education</h3> <br>
+            <p style="font-weight: bold;">MEARN Stack Web Development Course - <span
+                style="font-size: small;font-style: italic;font-weight: lighter;">September 2023 - March
+                2024</span><br />Luminar Technolab, Kakkanad</p> <br>
+            <p style="font-weight: bold;">B.Sc. Computer Application (Triple Main) - <span
+                style="font-size: small;font-style: italic;font-weight: lighter;">June 2019 - March
+                2022</span><br />Sacred Heart College, Thevara<br><span>CGPA: 6.78</span></p><br>
+            <p style="font-weight: bold;">Higher Secondary Certificate - <span
+                style="font-size: small;font-style: italic;font-weight: lighter;">June 2019 - March
+                2022</span><br />Sacred Heart Higher Secondary, Thevara<br><span>Percentage: 82.9</span></p>
+          </div>
+        </div>
+        <div class="text-container">
+          <p>
+            Hi there, I'm a fresh entrant to the IT world, who is thrilled to explore the realm of Full Stack Development.
+            I've always been
+            curious to learn new things and have adapted quickly to new technologies. Whether it's designing
+            user-friendly websites or tackling backend challenges, I've approached each task with enthusiasm and
+            creativity. Driven by a passion for growth and making a difference in the ever-evolving tech landscape, I'm
+            not just looking for a job; I'm on a quest to make my mark.
+          </p>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+  </section>
+  <section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Skills</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Frontend Development</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/react.svg" alt="Experience icon" class="icon" />
+              <div>
+                <h3>React</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/language-javascript.svg" alt="Experience icon" class="icon" />
+              <div>
+                <h3>JavaScript</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/language-html5.svg" alt="Experience icon" class="icon" />
+              <div>
+                <h3>HTML</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/language-css3.svg" alt="Experience icon" class="icon" />
+              <div>
+                <h3>CSS</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/bootstrap.svg" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Bootstrap</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/tailwind.svg" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Tailwind</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Backend Development</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/mongodb-svgrepo-com.svg" alt="Experience icon" class="icon" />
+              <div>
+                <h3>MongoDB</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/nodejs.svg" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Node JS</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/express-svgrepo-com.svg" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Express JS</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/firebase.svg" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Firebase</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/git.svg" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Git</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="https://global.discourse-cdn.com/business6/uploads/render/original/2X/1/11352202c8503f736bea5efb59684f678d7c860c.svg"
+                alt="Experience icon" class="icon" />
+              <div>
+                <h3>Render</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+  </section>
+  <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/bookstore.png" alt="Project 1" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Book Store</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/allenjohn07/MERN-BOOKSTORE'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://book-store-frontend-rho.vercel.app/'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/taskmanager.png" alt="Project 2" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Task Manager</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/allenjohn07/TASK-MANAGER'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://task-manager-react-firebase.web.app/'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/netflix.png" alt="Project 3" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Netflix Frontend</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/allenjohn07/NETFLIX'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://allenjohn07.github.io/NETFLIX/'">
+              Live Demo 
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+  </section>
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        <p><a href="mailto:allenjohnmonapallil@gmail.com">allenjohnmonapallil@gmail.com</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <p><a href="https://www.linkedin.com/in/allen-john-3a78092b9/">Allen John</a></p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <nav>
+        <div class="nav-links-container">
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </nav>
-    <section id="profile">
-        <div class="profilesection-container section-container">
-            <div class="profile-container">
-                <img src="./images/pic1round.png" alt="">
-            </div>
-            <div class="text-container">
-                <p class="text_p1">Hello, I'm</p>
-                <h1 class="title">Allen John</h1>
-                <p class="text_p2">Full Stack Developer</p>
-                <div class="socials-container">
-                    <a href="https://www.linkedin.com/in/allen-john-a04551228/"><i class="fa-brands fa-linkedin fa-2xl"
-                            style="color:  #A8A8A8;"></i></a>
-                    <a href="https://github.com/allenjohn07"><i class="fa-brands fa-github fa-2xl"
-                            style="color:  #A8A8A8;"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="about">
-        <p class="text_p1">Get to Know More</p>
-        <h1 class="title">About Me</h1>
-        <div class="aboutsection-container section-container">
-            <div class="aboutpic-container">
-                <img src="./images/aboutpic.jpg" alt="">
-            </div>
-            <div class="aboutdetails-container">
-                <div class="about-containers">
-                    <div class="details-container">
-                        <i class="fa-solid fa-award fa-lg"></i>
-                        <h3>Experience</h3>
-                        <p>2+ years <br> Full Stack Web Development</p>
-                    </div>
-                    <div class="details-container">
-                        <i class="fa-solid fa-user-graduate fa-lg"></i>
-                        <h3>Education</h3>
-                        <p>B.Sc Computer Application <br> Sacred Heart College, Thevara</p>
-                    </div>
-                </div>           
-                <div class="abttext-container">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae error harum alias, similique modi
-                        amet, quae ducimus est quod labore quo aspernatur, ipsa corrupti veritatis quas laborum
-                        blanditiis saepe. Totam laboriosam itaque id magnam veritatis inventore tempora rerum
-                        consequuntur, recusandae possimus vel consectetur laudantium quis veniam facere! Alias, quidem
-                        tempora.</p>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="Experience">
-        <p class="text_p1">Explore My</p>
-        <h1 class="title">Experience</h1>
-        <div class="experience-details-container section-container">
-            <div class="about-containers">
-                <div class="details-container">
-                    <h2 class="experience-subtitle">Frontend Development</h2>
-                    <div class="article-container">
-                        <article>
-                            <i class="fa-solid fa-circle-check fa-xl"></i>
-                            <div>
-                                <h3>HTML</h3>
-                                <P>Experienced</P>
-                            </div>
-                        </article>
-                        <article>
-                            <i class="fa-solid fa-circle-check fa-xl"></i>
-                            <div>
-                                <h3>CSS</h3>
-                                <P>Experienced</P>
-                            </div>
-                        </article>
-                        <article>
-                            <i class="fa-solid fa-circle-check fa-xl"></i>
-                            <div>
-                                <h3>JavaScript</h3>
-                                <P>Basic</P>
-                            </div>
-                        </article>
-                        <article>
-                            <i class="fa-solid fa-circle-check fa-xl"></i>
-                            <div>
-                                <h3>Bootstrap</h3>
-                                <P>Intermediate</P>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div class="details-container">
-                    <h2 class="experience-subtitle">Backend Development</h2>
-                    <div class="article-container">
-                        <article>
-                            <i class="fa-solid fa-circle-check fa-xl"></i>
-                            <div>
-                                <h3>PostgreSQL</h3>
-                                <P>Basic</P>
-                            </div>
-                        </article>
-                        <article>
-                            <i class="fa-solid fa-circle-check fa-xl"></i>
-                            <div>
-                                <h3>Node JS</h3>
-                                <P>Intermediate</P>
-                            </div>
-                        </article>
-                        <article>
-                            <i class="fa-solid fa-circle-check fa-xl"></i>
-                            <div>
-                                <h3>Express JS</h3>
-                                <P>Basic</P>
-                            </div>
-                        </article>
-                        <article>
-                            <i class="fa-solid fa-circle-check fa-xl"></i>
-                            <div>
-                                <h3>Git</h3>
-                                <P>Basic</P>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div> 
-        </div>
-    </section>
-    <section id="projects">
-        <p class="text_p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="experience-details-container section-container">
-            <div class="about-containers">
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="./images/project-1.png" alt="" class="project-img">
-                </div>
-                <h2 class="experience-subtitle project-title">
-                    Project One
-                </h2>
-
-            </div> 
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="./images/project-2.png" alt="" class="project-img">
-                </div>
-                <h2 class="experience-subtitle project-title">
-                    Project Two
-                </h2>
-
-            </div> 
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="./images/project-3.png" alt="" class="project-img">
-                </div>
-                <h2 class="experience-subtitle project-title">
-                    Project Three
-                </h2>
-
-            </div>
-        </div> 
-
-        </div>
-
-    </section>
-    <section id="contact">
-        <p class="text_p1">Get in Touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container section-container">
-            <div class="contact-info-container">
-                <i class="fa-solid fa-envelope fa-xl"></i>
-                <p><a href="mailto:example@gmail.com">Example@gmail.com</a></p>
-            </div>
-            <div class="contact-info-container">
-                <i class="fa-brands fa-linkedin fa-xl"></i>
-                <p><a href="https://www.linkedin.com/in/allen-john-a04551228/">Linkedin</a></p>
-            </div>
-        </div>
-        
-
-    </section>
-    <footer>
-        <nav>
-            <div class="nav-links-container">
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#Experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-        <p>Copyright &#169; 2023 Allen John. All Rights Reserved.</p>
-    </footer>
-    
-        
-    
-
-
-
+    <p>
+        Copyright &#169; 2024 Allen John. All Rights Reserved.
+        <a href="#"><img src="./assets/arrow.png" alt="Arrow icon" style="width: 20px;rotate: 180deg;"></a>
+    </p>
+</footer>
+  <script src="script.js"></script>
 </body>
 
 </html>
